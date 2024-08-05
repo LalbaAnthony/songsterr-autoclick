@@ -6,7 +6,7 @@
       console.log('Popup closed.');
     }
 
-    setTimeout(clickLink, 100);
+    setTimeout(closePopup(), 100);
   }
 
   closePopup();
