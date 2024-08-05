@@ -5,9 +5,7 @@
       anchorElement.click();
       console.log('Popup closed.');
     }
-
-    setTimeout(closePopup(), 100);
   }
 
-  closePopup();
+  setInterval(closePopup, 100);
 // });
