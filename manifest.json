@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Songsterr Autoclick",
+    "version": "1.0",
+    "description": "",
+    "action": {
+        "default_popup": "src/popup.html",
+        "default_icon": "assets/icon.png"
+    },
+    "permissions": [
+        "activeTab"
+    ]
+}
