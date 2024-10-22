@@ -2,12 +2,27 @@
     "manifest_version": 3,
     "name": "Songsterr Autoclick",
     "version": "1.0",
-    "description": "",
+    "description": "A simple extension that automatically clicks the button on Songsterr",
     "action": {
         "default_popup": "src/popup.html",
         "default_icon": "assets/icon.png"
     },
     "permissions": [
-        "activeTab"
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "src/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "src/content.js"
+            ],
+            "run_at": "document_idle"
+        }
     ]
 }
