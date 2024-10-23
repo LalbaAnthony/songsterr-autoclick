@@ -1,4 +1,3 @@
-
 function closePopup() {
     var anchorElement = document.querySelector('.rq1ph a');
     if (anchorElement) {
@@ -9,16 +8,12 @@ function closePopup() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Autoclick loaded.');
-    const startBtn = document.getElementById('start-btn');
-    if (startBtn) {
-        startBtn.addEventListener('click', () => {
-            setInterval(closePopup, 250);
-            console.log('Autoclick started.');
-        });
-        console.log('Start button found.');
-    } else {
-        console.log('Start button not found.');
-    }
-});
+function getDomaine() {
+    return window.location.hostname;
+}
+
+if (getDomaine() === 'www.songsterr.com') {
+    setInterval(closePopup, 250);
+}
+
+console.log('Songstarr autoclick loaded.');
