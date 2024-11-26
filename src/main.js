@@ -16,4 +16,4 @@ if (getDomaine() === 'www.songsterr.com') {
     setInterval(closePopup, 250);
 }
 
-console.log('Songstarr autoclick loaded.');
+console.log('Songsterr autoclick loaded.');
