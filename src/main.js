@@ -1,11 +1,13 @@
 function closePopup() {
     var pElement = document.querySelector('.rq1ph');
-    var anchorElement = pElement.querySelector('a');
-    if (anchorElement) {
-        anchorElement.click();
-        console.log('Popup closed.');
-    } else {
-        console.log('Close button not found.');
+    if (pElement) {
+        var anchorElement = pElement.querySelector('a');
+        if (anchorElement) {
+            anchorElement.click();
+            console.log('Popup closed.');
+        } else {
+            console.log('Close button not found.');
+        }
     }
 }
 
