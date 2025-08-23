@@ -1,5 +1,6 @@
 function closePopup() {
-    var anchorElement = document.querySelector('.rq1ph a');
+    var pElement = document.querySelector('.rq1ph');
+    var anchorElement = pElement.querySelector('a');
     if (anchorElement) {
         anchorElement.click();
         console.log('Popup closed.');
