@@ -1,5 +1,5 @@
 function closePopup() {
-    var pElement = document.querySelector('.rq1ph');
+    var pElement = document.querySelector('.C83v7g');
     if (pElement) {
         var anchorElement = pElement.querySelector('a');
         if (anchorElement) {
