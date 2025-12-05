@@ -1,21 +1,25 @@
-function closePopup() {
-    var pElement = document.querySelector('.C83v7g');
-    if (pElement) {
-        var anchorElement = pElement.querySelector('a');
-        if (anchorElement) {
-            anchorElement.click();
-            console.log('Popup closed.');
+
+if (window.location.hostname === 'www.songsterr.com') {
+    function closePopup() {
+        var pElement = document.querySelector('.C83v7g');
+        if (pElement) {
+            var anchorElement = pElement.querySelector('a');
+            if (anchorElement) {
+                // Click on anchor element as an human would do
+                anchorElement.click();
+
+                // Delete popup from DOM
+                document.querySelector('.C8325s').remove();
+
+                console.log('Popup closed.');
+            } else {
+                console.error('Close button not found.');
+            }
         } else {
-            console.log('Close button not found.');
+            console.error('Popup not found.');
         }
     }
-}
 
-function getDomaine() {
-    return window.location.hostname;
-}
-
-if (getDomaine() === 'www.songsterr.com') {
-    setInterval(closePopup, 250);
+    setInterval(closePopup, 1000);
     console.log('Songsterr autoclick loaded.');
 }
